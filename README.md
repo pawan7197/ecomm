@@ -12,7 +12,7 @@ Click Create Security Group
 
 Fill in:
 
-Name: Ecom-SG
+Name: Ecom
 
 Description: Security group for your e-commerce app EC2 instances.
 
@@ -22,11 +22,8 @@ SSH (port 22): So you can connect to the EC2 via terminal.
 
 HTTP (port 80): So people can access the website.
 
-✅ This allows you and users to connect to the EC2 and view your website.
-
 📸 Add Image: Screenshot of Security Group Inbound Rule Configuration Here
 ![Image](https://github.com/user-attachments/assets/bebadcde-0a90-4a0f-a74c-1ec85a98abc0)
-
 
 
 2. 🚚 Deploy the E-Commerce App on EC2 Instances
@@ -43,9 +40,9 @@ AMI: Amazon Linux
 
 Instance Type: t2.micro
 
-Security Group: Ecom-SG
+Security Group: Ecom
 
-Key Pair: Create new → name it joy
+Key Pair: Create new → Devops
 
 AZ 1: us-east-1a (EC2-1A)
 
@@ -59,7 +56,7 @@ Step 2.2: Install App on EC2
 
 SSH into both instances using your terminal:
 
-ssh -i joy.pem ec2-user@<public-ip>
+ssh -i Devops.pem ec2-user@<public-ip>
 
 Then run this setup:
 
@@ -67,8 +64,7 @@ sudo yum update -y
 sudo yum install git httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
-sudo git clone https://github.com/shiva7919/ecomm.git
-sudo rm -rf /var/www/html/*
+sudo git clone https://github.com/pawan7197/ecomm.gitsudo rm -rf /var/www/html/*
 sudo cp -r ecomm/* /var/www/html
 
 
