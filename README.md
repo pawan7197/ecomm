@@ -1,4 +1,4 @@
-![Screenshot 2025-07-02 22 30 43](https://github.com/user-attachments/assets/223dd34d-7e6b-4413-b807-8e0c307230f5)🚀 Full Deployment Guide: E-Commerce App on AWS
+🚀 Full Deployment Guide: E-Commerce App on AWS
 
 1. 🏗️ Setup the EC2 Infrastructure
 
@@ -110,6 +110,8 @@ Register both EC2s to this group.
 Click Create
 
 📸 Add Image: Target Group Creation and Registration Screenshot
+![Image](https://github.com/user-attachments/assets/44b05f85-9b5b-4286-9760-565376e62928)
+![Image](https://github.com/user-attachments/assets/ae075b62-c4ae-48e5-8c2b-9fa5762493b7)
 
 Step 3.2: Create Application Load Balancer
 
@@ -133,6 +135,9 @@ Target Group: Ecom-TG
 
 📸 Add Image: Load Balancer Configuration Summary
 
+![Image](https://github.com/user-attachments/assets/f5302443-dfb9-4b94-a34e-5d10aad8ba5a)
+
+![Image](https://github.com/user-attachments/assets/0d1b807e-e23e-4d65-b082-19e9734fd0f0)
 Step 3.3: Test Load Balancer
 
 Once ALB is active, open:
@@ -160,6 +165,9 @@ Uncheck reboot, click Create Image
 Wait until AMI status = available
 
 📸 Add Image: AMI Creation and Status Available
+![Image](https://github.com/user-attachments/assets/6fbdc81c-0028-4f0b-868e-0fa8fd54640b)
+
+![Image](https://github.com/user-attachments/assets/e47a6a2e-d525-4200-a108-9348b6019bc3)
 
 Step 4.2: Create Launch Template
 
@@ -224,6 +232,7 @@ Optional: Set email alerts using SNS.
 Click Create Auto Scaling Group
 
 📸 Add Image: Auto Scaling Group Configuration Summary
+![Image](https://github.com/user-attachments/assets/f354ae08-122f-446b-9753-0c3db1efb165)
 
 5. 🥐 Validate Deployment
 
@@ -234,6 +243,7 @@ Go to Target Groups > Targets → Check instance health.
 Open Load Balancer DNS → Your app should work fine.
 
 📸 Add Image: Auto Scaling Instances and Healthy Target Status
+![Image](https://github.com/user-attachments/assets/aba26d46-0d6c-449a-a917-46e1e088b32b)
 
 6. 🔍 Test Auto Scaling with Load (Stress Test)
 
@@ -263,6 +273,7 @@ Target Group → All should show Healthy
 SNS emails for scale-up alerts (if enabled)
 
 📸 Add Image: CloudWatch Alarm and SNS Notification
+![Image](https://github.com/user-attachments/assets/c26dda3f-ebd6-4890-a75e-e560cb0b8377)
 
 🎉 You have successfully deployed and tested a scalable E-Commerce app using EC2, ALB, and Auto Scaling on AWS!
 
